@@ -1,0 +1,23 @@
+{
+  "name": "fortnite-autoqueue",
+  "version": "0.2.0-preview",
+  "private": true,
+  "description": "Open-source Electron desktop and Python screen-recognition engine for Fortnite queue management",
+  "license": "MIT",
+  "main": "desktop/main.cjs",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "start": "node desktop/start.cjs",
+    "test": "node --test desktop/tests/*.test.cjs",
+    "test:python": "py -m unittest discover -v"
+  },
+  "devDependencies": {
+    "electron": "45.2.3"
+  },
+  "dependencies": {
+    "@fontsource/outfit": "5.3.0",
+    "lucide": "1.70.0"
+  }
+}

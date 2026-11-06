@@ -1,25 +1,12 @@
-# Publishing to GitHub
+# Source release checklist
 
-This directory is a public source export. The original calibrated desktop installation stays separate.
+The current release is a source preview, not a standalone EXE.
 
-1. Sign in to GitHub and create a new public repository, for example `fortnite-autoqueue`.
-2. Leave the automatic README, license and .gitignore options unchecked: they are already included here.
-3. Choose **uploading an existing file** on the empty repository page.
-4. Upload the **contents of this directory**, including `.gitignore`, `LICENSE`, `config.json`, `config.example.json`, the supplied PNGs under `templates/`, tests and synthetic fixtures. Do not upload the ZIP as a single repository file.
-5. Review the file list, then commit the upload.
+1. Update package.json, package-lock.json, README, changelog and desktop documentation.
+2. Run npm ci, npm test, and py -m unittest discover -v on Windows. Check syntax and the preview UI without starting live automation.
+3. Review staged files: include source, lockfiles, the calibrated preset and selected crops. Exclude node_modules, personal full captures, logs, backups and build output.
+4. Commit and push a normal update without rewriting history.
+5. Create a preview tag and GitHub prerelease for the tested commit. Attach a ZIP produced from tracked files, not the working directory.
+6. Verify the public download and its hash. Confirm the archive contains package.json, package-lock.json, desktop/, Python source, config and templates.
 
-Alternatively, from this directory using Git:
-
-```powershell
-git init
-git add .
-git diff --cached --stat
-git commit -m "Initial open-source release"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/fortnite-autoqueue.git
-git push -u origin main
-```
-
-Replace `YOUR-USERNAME` with your account name and create the empty repository first. Authenticate through GitHub's normal sign-in flow; never put credentials in source files.
-
-The source export includes the supplied German recognition crops and their validated preset. Users should try these first and only capture replacements if recognition fails. Full personal screenshots, logs, template backups and internal project notes are excluded. Private screenshot tests are intentionally skipped without their local captures. The MIT license covers source code and synthetic fixtures, not Fortnite interface assets.
+The MIT License covers project source and synthetic fixtures. Preserve third-party notices and the separate ownership of Fortnite interface assets.

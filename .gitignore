@@ -33,3 +33,10 @@ venv/
 .idea/
 Thumbs.db
 Desktop.ini
+
+# Electron development dependencies and future build output
+/node_modules/
+/dist/
+/out/
+/release/
+npm-debug.log*
