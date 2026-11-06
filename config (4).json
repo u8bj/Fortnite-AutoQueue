@@ -1,0 +1,553 @@
+{
+  "version": 1,
+  "poll_interval": 0.35,
+  "debug": false,
+  "debug_limit": 30,
+  "mode_check": "manual",
+  "team_end_from_results": true,
+  "templates": {
+    "lobby": {
+      "file": "templates/lobby.png",
+      "enabled": true,
+      "roi": [
+        0,
+        0.35,
+        0.4,
+        0.6
+      ],
+      "threshold": 0.86,
+      "confirmations": 2,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "play": {
+      "file": "templates/play.png",
+      "enabled": true,
+      "roi": [
+        0,
+        0.55,
+        0.4,
+        0.45
+      ],
+      "threshold": 0.86,
+      "confirmations": 2,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "ready_button": {
+      "file": "templates/ready_button.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.55,
+        0.4,
+        0.45
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "lobby_navigation": {
+      "file": "templates/lobby_navigation.png",
+      "enabled": true,
+      "roi": [
+        0.08,
+        0.025,
+        0.14,
+        0.08
+      ],
+      "threshold": 0.92,
+      "confirmations": 3,
+      "reference_size": [
+        1919,
+        1079
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "mode_zero_build": {
+      "file": "templates/mode_zero_build.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "mode_squads": {
+      "file": "templates/mode_squads.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "mode_unranked": {
+      "file": "templates/mode_unranked.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "mode_fill": {
+      "file": "templates/mode_fill.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "matchmaking": {
+      "file": "templates/matchmaking.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.45,
+        0.5,
+        0.55
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "loading": {
+      "file": "templates/loading.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "jump": {
+      "file": "templates/jump.png",
+      "enabled": true,
+      "roi": [
+        0.52,
+        0.45,
+        0.28,
+        0.2
+      ],
+      "threshold": 0.9,
+      "confirmations": 2,
+      "reference_size": [
+        1919,
+        1079
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "glider": {
+      "file": "templates/glider.png",
+      "enabled": false,
+      "roi": [
+        0.4,
+        0.3,
+        0.6,
+        0.5
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "falling": {
+      "file": "templates/falling.png",
+      "enabled": true,
+      "roi": [
+        0.55,
+        0.48,
+        0.25,
+        0.15
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "in_match": {
+      "file": "templates/in_match.png",
+      "enabled": true,
+      "roi": [
+        0,
+        0.89,
+        0.05,
+        0.1
+      ],
+      "threshold": 0.94,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "own_dead": {
+      "file": "templates/own_dead.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "spectating": {
+      "file": "templates/spectating.png",
+      "enabled": true,
+      "roi": [
+        0.35,
+        0,
+        0.3,
+        0.13
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1919,
+        1079
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "teammate_alive": {
+      "file": "templates/teammate_alive.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0,
+        0.45,
+        0.5
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "team_eliminated": {
+      "file": "templates/team_eliminated.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "placement": {
+      "file": "templates/placement.png",
+      "enabled": true,
+      "roi": [
+        0.3,
+        0,
+        0.35,
+        0.12
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1919,
+        1079
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "continue": {
+      "file": "templates/continue.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        1,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "skip": {
+      "file": "templates/skip.png",
+      "enabled": true,
+      "roi": [
+        0.75,
+        0.85,
+        0.25,
+        0.15
+      ],
+      "threshold": 0.93,
+      "confirmations": 3,
+      "reference_size": [
+        1919,
+        1079
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "match_summary": {
+      "file": "templates/match_summary.png",
+      "enabled": true,
+      "roi": [
+        0,
+        0,
+        0.35,
+        0.12
+      ],
+      "threshold": 0.92,
+      "confirmations": 3,
+      "reference_size": [
+        1909,
+        1074
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "replay": {
+      "file": "templates/replay.png",
+      "enabled": true,
+      "roi": [
+        0.653125,
+        0.37407407407407406,
+        0.3375,
+        0.22870370370370371
+      ],
+      "threshold": 0.92,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "return_lobby": {
+      "file": "templates/return_lobby.png",
+      "enabled": true,
+      "roi": [
+        0.6,
+        0.3,
+        0.4,
+        0.35
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1909,
+        1074
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    }
+  },
+  "timeouts": {
+    "LOBBY": 600,
+    "MATCHMAKING": 600,
+    "LOADING": 300,
+    "BATTLE_BUS": 45,
+    "JUMPING": 15,
+    "IN_MATCH": 5400,
+    "SPECTATING": 5400,
+    "TEAM_ELIMINATED": 90,
+    "WAITING_FOR_RESULTS": 120,
+    "SKIP_XP": 45,
+    "MATCH_SUMMARY": 120,
+    "RETURNING_TO_LOBBY": 120,
+    "REPLAY": 120
+  }
+}
