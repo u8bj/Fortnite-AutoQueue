@@ -1,304 +1,553 @@
 {
+  "version": 1,
+  "poll_interval": 0.35,
+  "debug": false,
+  "debug_limit": 30,
+  "mode_check": "manual",
+  "team_end_from_results": true,
   "templates": {
     "lobby": {
-      "file": "tests/fixtures/lifecycle/cue-lobby.png",
+      "file": "templates/lobby.png",
       "enabled": true,
       "roi": [
-        0.0234375,
-        0.125,
-        0.21875,
-        0.1
+        0,
+        0.35,
+        0.4,
+        0.6
       ],
+      "threshold": 0.86,
+      "confirmations": 2,
       "reference_size": [
-        640,
-        360
+        1920,
+        1080
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
     },
     "play": {
-      "file": "tests/fixtures/lifecycle/cue-play.png",
+      "file": "templates/play.png",
       "enabled": true,
       "roi": [
-        0.265625,
-        0.125,
-        0.21875,
-        0.1
+        0,
+        0.55,
+        0.4,
+        0.45
       ],
+      "threshold": 0.86,
+      "confirmations": 2,
       "reference_size": [
-        640,
-        360
+        1920,
+        1080
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
+    },
+    "ready_button": {
+      "file": "templates/ready_button.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.55,
+        0.4,
+        0.45
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "lobby_navigation": {
+      "file": "templates/lobby_navigation.png",
+      "enabled": true,
+      "roi": [
+        0.08,
+        0.025,
+        0.14,
+        0.08
+      ],
+      "threshold": 0.92,
+      "confirmations": 3,
+      "reference_size": [
+        1919,
+        1079
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "mode_zero_build": {
+      "file": "templates/mode_zero_build.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "mode_squads": {
+      "file": "templates/mode_squads.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "mode_unranked": {
+      "file": "templates/mode_unranked.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "mode_fill": {
+      "file": "templates/mode_fill.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
     },
     "matchmaking": {
-      "file": "tests/fixtures/lifecycle/cue-matchmaking.png",
-      "enabled": true,
+      "file": "templates/matchmaking.png",
+      "enabled": false,
       "roi": [
-        0.5078125,
-        0.125,
-        0.21875,
-        0.1
+        0,
+        0.45,
+        0.5,
+        0.55
       ],
+      "threshold": 0.9,
+      "confirmations": 3,
       "reference_size": [
-        640,
-        360
+        1920,
+        1080
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
     },
     "loading": {
-      "file": "tests/fixtures/lifecycle/cue-loading.png",
-      "enabled": true,
+      "file": "templates/loading.png",
+      "enabled": false,
       "roi": [
-        0.75,
-        0.125,
-        0.21875,
-        0.1
-      ],
-      "reference_size": [
-        640,
-        360
-      ],
-      "scales": [
+        0,
+        0,
+        1,
         1
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
     },
     "jump": {
-      "file": "tests/fixtures/lifecycle/cue-jump.png",
+      "file": "templates/jump.png",
       "enabled": true,
       "roi": [
-        0.0234375,
-        0.3055555555555556,
-        0.21875,
-        0.1
+        0.52,
+        0.45,
+        0.28,
+        0.2
       ],
+      "threshold": 0.9,
+      "confirmations": 2,
       "reference_size": [
-        640,
-        360
+        1919,
+        1079
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
+    },
+    "glider": {
+      "file": "templates/glider.png",
+      "enabled": false,
+      "roi": [
+        0.4,
+        0.3,
+        0.6,
+        0.5
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
     },
     "falling": {
-      "file": "tests/fixtures/lifecycle/cue-falling.png",
+      "file": "templates/falling.png",
       "enabled": true,
       "roi": [
-        0.265625,
-        0.3055555555555556,
-        0.21875,
-        0.1
+        0.55,
+        0.48,
+        0.25,
+        0.15
       ],
+      "threshold": 0.9,
+      "confirmations": 3,
       "reference_size": [
-        640,
-        360
+        1920,
+        1080
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
+    },
+    "in_match": {
+      "file": "templates/in_match.png",
+      "enabled": true,
+      "roi": [
+        0,
+        0.89,
+        0.05,
+        0.1
+      ],
+      "threshold": 0.94,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
     },
     "own_dead": {
-      "file": "tests/fixtures/lifecycle/cue-own_dead.png",
-      "enabled": true,
+      "file": "templates/own_dead.png",
+      "enabled": false,
       "roi": [
-        0.5078125,
-        0.3055555555555556,
-        0.21875,
-        0.1
-      ],
-      "reference_size": [
-        640,
-        360
-      ],
-      "scales": [
+        0,
+        0,
+        1,
         1
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
     },
     "spectating": {
-      "file": "tests/fixtures/lifecycle/cue-spectating.png",
+      "file": "templates/spectating.png",
       "enabled": true,
       "roi": [
-        0.75,
-        0.3055555555555556,
-        0.21875,
-        0.1
+        0.35,
+        0,
+        0.3,
+        0.13
       ],
+      "threshold": 0.9,
+      "confirmations": 3,
       "reference_size": [
-        640,
-        360
+        1919,
+        1079
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
     },
     "teammate_alive": {
-      "file": "tests/fixtures/lifecycle/cue-teammate_alive.png",
-      "enabled": true,
+      "file": "templates/teammate_alive.png",
+      "enabled": false,
       "roi": [
-        0.0234375,
-        0.4861111111111111,
-        0.21875,
-        0.1
+        0,
+        0,
+        0.45,
+        0.5
       ],
+      "threshold": 0.9,
+      "confirmations": 3,
       "reference_size": [
-        640,
-        360
+        1920,
+        1080
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
     },
     "team_eliminated": {
-      "file": "tests/fixtures/lifecycle/cue-team_eliminated.png",
-      "enabled": true,
+      "file": "templates/team_eliminated.png",
+      "enabled": false,
       "roi": [
-        0.265625,
-        0.4861111111111111,
-        0.21875,
-        0.1
-      ],
-      "reference_size": [
-        640,
-        360
-      ],
-      "scales": [
+        0,
+        0,
+        1,
         1
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
     },
     "placement": {
-      "file": "tests/fixtures/lifecycle/cue-placement.png",
+      "file": "templates/placement.png",
       "enabled": true,
       "roi": [
-        0.5078125,
-        0.4861111111111111,
-        0.21875,
-        0.1
+        0.3,
+        0,
+        0.35,
+        0.12
       ],
+      "threshold": 0.9,
+      "confirmations": 3,
       "reference_size": [
-        640,
-        360
+        1919,
+        1079
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
     },
     "continue": {
-      "file": "tests/fixtures/lifecycle/cue-continue.png",
+      "file": "templates/continue.png",
+      "enabled": false,
+      "roi": [
+        0,
+        0.4,
+        1,
+        0.6
+      ],
+      "threshold": 0.9,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
+    },
+    "skip": {
+      "file": "templates/skip.png",
       "enabled": true,
       "roi": [
         0.75,
-        0.4861111111111111,
-        0.21875,
-        0.1
+        0.85,
+        0.25,
+        0.15
       ],
+      "threshold": 0.93,
+      "confirmations": 3,
       "reference_size": [
-        640,
-        360
+        1919,
+        1079
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
-    },
-    "skip": {
-      "file": "tests/fixtures/lifecycle/cue-skip.png",
-      "enabled": true,
-      "roi": [
-        0.0234375,
-        0.6666666666666666,
-        0.21875,
-        0.1
-      ],
-      "reference_size": [
-        640,
-        360
-      ],
-      "scales": [
-        1
-      ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
     },
     "match_summary": {
-      "file": "tests/fixtures/lifecycle/cue-match_summary.png",
+      "file": "templates/match_summary.png",
       "enabled": true,
       "roi": [
-        0.265625,
-        0.6666666666666666,
-        0.21875,
-        0.1
+        0,
+        0,
+        0.35,
+        0.12
       ],
+      "threshold": 0.92,
+      "confirmations": 3,
       "reference_size": [
-        640,
-        360
+        1909,
+        1074
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
+    },
+    "replay": {
+      "file": "templates/replay.png",
+      "enabled": true,
+      "roi": [
+        0.653125,
+        0.37407407407407406,
+        0.3375,
+        0.22870370370370371
+      ],
+      "threshold": 0.92,
+      "confirmations": 3,
+      "reference_size": [
+        1920,
+        1080
+      ],
+      "scales": [
+        0.95,
+        1.0,
+        1.05
+      ],
+      "grayscale": true
     },
     "return_lobby": {
-      "file": "tests/fixtures/lifecycle/cue-return_lobby.png",
+      "file": "templates/return_lobby.png",
       "enabled": true,
       "roi": [
-        0.5078125,
-        0.6666666666666666,
-        0.21875,
-        0.1
+        0.6,
+        0.3,
+        0.4,
+        0.35
       ],
+      "threshold": 0.9,
+      "confirmations": 3,
       "reference_size": [
-        640,
-        360
+        1909,
+        1074
       ],
       "scales": [
-        1
+        0.95,
+        1.0,
+        1.05
       ],
-      "threshold": 0.98,
-      "confirmations": 2,
-      "grayscale": false
+      "grayscale": true
     }
+  },
+  "timeouts": {
+    "LOBBY": 600,
+    "MATCHMAKING": 600,
+    "LOADING": 300,
+    "BATTLE_BUS": 45,
+    "JUMPING": 15,
+    "IN_MATCH": 5400,
+    "SPECTATING": 5400,
+    "TEAM_ELIMINATED": 90,
+    "WAITING_FOR_RESULTS": 120,
+    "SKIP_XP": 45,
+    "MATCH_SUMMARY": 120,
+    "RETURNING_TO_LOBBY": 120,
+    "REPLAY": 120
   }
 }
